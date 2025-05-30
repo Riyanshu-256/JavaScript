@@ -71,8 +71,8 @@ Each folder represents a learning module, and the JS files inside contain explai
 
 ## 🌐 Connect with Me
 
-- 💼 LinkedIn: [Sourav Kumar](https://www.linkedin.com/in/riyanshu-sharma-b1b216329/)
-- 💻 GitHub: [sourav-kumar-357](https://github.com/Sharmariyanshu)
+- 💼 LinkedIn: [Riyanshu Sharma](https://www.linkedin.com/in/riyanshu-sharma-b1b216329/)
+- 💻 GitHub: [Sharmariyanshu](https://github.com/Sharmariyanshu)
 - ✉️ Open to: Internships, collaborations, and tech communities!
 
 ---
