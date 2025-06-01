@@ -170,3 +170,46 @@ console.log(age1, age2, age3);
 const age = [calcAge(years[0]), calcAge(years[1]), calcAge(years[years.length -1])];
 console.log(age);
 */
+
+/* 8.
+// Add elements
+const friends = ['Indu', 'Aditya', 'Anshu'];
+const newLength = friends.push('Chikki');
+console.log(friends);
+console.log(newLength);
+
+friends.unshift('Ansh');
+console.log(friends);
+
+// Remove elements
+friends.pop(); //last
+const popped = friends.pop();
+console.log(popped);
+console.log(friends);
+
+friends.shift(friends.indexOf('Anshu'));
+friends.shift(friends.indexOf('Bob'));
+
+friends.push(23);
+console.log(friends.includes('Anshu'));
+console.log(friends.includes('Bob'));
+console.log(friends.includes('23'));
+
+if (friends.includes('Chikki')) {
+    console.log('You have a friend called Chikki');
+}
+*/
+ 
+/*
+// Coding Challenge #2
+const calcTip = function (bill) {
+  return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+}
+// const calcTip = bill => bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+
+const bills = [125, 555, 44];
+const tips = [calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[2])];
+const totals = [bills[0] + tips[0], bills[1] + tips[1], bills[2] + tips[2]];
+
+console.log(bills, tips, totals);
+*/
