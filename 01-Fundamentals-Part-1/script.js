@@ -94,7 +94,7 @@ const isFullAge = ageIndu >=18;
 
 console.log(now - 2005 > now - 2001 > now - 1997);
 */
-let now;
+let now=2025;
 const ageRiyanshu = now-2005;
 const ageAditya = now-2001;
 const ageIndu = now-1997;
