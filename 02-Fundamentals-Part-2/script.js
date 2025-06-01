@@ -104,9 +104,8 @@ yearsUntilRetirement(2005, 'Riyanshu');
 yearsUntilRetirement(2000, 'Anshu');
 */
 
-//Coding Challenge #1
+/* //Coding Challenge #1
 
-//Test1
 const calcAverage = (a, b, c) => (a + b + c) / 3;
 console.log(calcAverage(3, 4, 5));
 
@@ -133,3 +132,41 @@ scoreDolphins = calcAverage(85, 54, 41);
 scoreKoalas = calcAverage(23, 34, 27);
 console.log(scoreDolphins, scoreKoalas);
 checkWinner(scoreDolphins, scoreKoalas);
+*/
+
+/* 7.
+// ARRAY
+const friend1 = 'Indu';
+const friend2 = 'Aditya';
+const friend3 = 'Anshu';
+
+const friends = ['Indu', 'Aditya', 'Anshu'];
+console.log(friends);
+
+const years = new Array(1996, 2001, 2005);
+console.log(years);
+
+console.log(friends.length);
+console.log(friends[friends.length -1]);
+
+friends[2] = 'Chiiki';
+console.log(friends)
+
+const firstName = 'Anshu';
+const Anshu = [firstName, 'Sharma', 2025-2005, 'Student', friends ];
+console.log(Anshu.length);
+
+// Exercise
+const calcAge = function (birthYear) {
+    return 2025-2000;
+}
+
+const year = [1900, 1996, 2000, 2005, 2010] ;
+
+const age1 = calcAge(years[0]);
+const age2 = calcAge(years[1]);
+const age3 = calcAge(years[years.length -1]);
+console.log(age1, age2, age3);
+const age = [calcAge(years[0]), calcAge(years[1]), calcAge(years[years.length -1])];
+console.log(age);
+*/
