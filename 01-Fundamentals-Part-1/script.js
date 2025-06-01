@@ -108,14 +108,12 @@ console.log(x,y);
 const averageAge = (ageRiyanshu + ageAditya + ageIndu)/2 ;
 console.log(ageRiyanshu, ageAditya, ageIndu, averageAge);
 
-
-//error
 const firstName = 'Riyanshu';
 const job = 'teacher';
 const birthYear = 2005;
 const year = 2025;
 
-const Riyanshu = "I'm" +' '+ firstName + ' ' + (year - birthYear) +' ' + 'year old' + ' ' + job + '!' ;
+const Riyanshu = `I'm" +' '+ firstName + ' ' + (year - birthYear) +' ' + 'year old' + ' ' + job + '!' ` ;
 console.log(Riyanshu);
  console.log('Just a regular string');
 
@@ -123,7 +121,7 @@ console.log(Riyanshu);
     multiple \n\
     lines');
 */
-
+/*
 const age = 21;
 
 if (age >= 18){
@@ -142,3 +140,44 @@ if(birthYear <= 2000){
     century = 21;
 }
 console.log(century);
+*/
+
+const massMark = 78;
+const heightMark = 1.69;
+const massJohn = 92;
+const heightJohn = 1.95;
+
+const BMIMark = massMark / heightMark ** 2;
+const BMIJohn = massJohn / (heightJohn * heightJohn);
+console.log(BMIMark, BMIJohn);
+
+if (BMIMark > BMIJohn) {
+    console.log(`Mark's BMI (${BMIMark}) is higher than John(${BMIJohn});!`)
+}else{
+    console.log(`Mark's BMI (${BMIJohn})is higher than John(${BMIMark});!`)
+}
+
+//type conversion
+const inputYear = '1991' ;
+console.log(Number(inputYear), inputYear);
+console.log(Number(inputYear) + 18);
+
+console.log(Number('Riyanshu'));
+console.log(typeof NaN)
+
+console.log(String(23), 23);
+
+//type coercion
+console.log('I am ' + 21 + ' years old');
+console.log('23' - '10'- 3);
+console.log('23' + '10'+ 3);
+console.log('23' * '10');
+console.log('23' / '10');
+console.log('23' % '10');
+
+let n = '1'+ 1;
+n = n -1;
+console.log(n);
+
+console.log( 2+3+4 +'5');
+console.log('10'-'4'-'3'-2+'5');
