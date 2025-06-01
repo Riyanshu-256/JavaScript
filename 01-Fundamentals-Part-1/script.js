@@ -94,6 +94,7 @@ const isFullAge = ageIndu >=18;
 
 console.log(now - 2005 > now - 2001 > now - 1997);
 */
+/*
 let now=2025;
 const ageRiyanshu = now-2005;
 const ageAditya = now-2001;
@@ -106,3 +107,38 @@ console.log(x,y);
 
 const averageAge = (ageRiyanshu + ageAditya + ageIndu)/2 ;
 console.log(ageRiyanshu, ageAditya, ageIndu, averageAge);
+
+
+//error
+const firstName = 'Riyanshu';
+const job = 'teacher';
+const birthYear = 2005;
+const year = 2025;
+
+const Riyanshu = "I'm" +' '+ firstName + ' ' + (year - birthYear) +' ' + 'year old' + ' ' + job + '!' ;
+console.log(Riyanshu);
+ console.log('Just a regular string');
+
+ console.log('String with \n\
+    multiple \n\
+    lines');
+*/
+
+const age = 21;
+
+if (age >= 18){
+    console.log('Riyanshu can drive');
+}else{
+    const yearsLeft = 18 - age;
+    console.log('Riyanshu is too young. wait another ${yearsLeft} years :');
+}
+
+const birthYear = 2012;
+
+let century;
+if(birthYear <= 2000){
+    century = 20;
+}else{
+    century = 21;
+}
+console.log(century);
