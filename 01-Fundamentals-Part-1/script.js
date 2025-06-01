@@ -216,3 +216,25 @@ if (favourite == 23) { // 22 === 23 -> FALSE
 }
 
 if (favourite !==23) console.log('Why not 23!');
+
+//logical operators
+const hasDriveringLicense = true; // A
+const hasGoodVision = true; //B
+
+console.log(hasDriveringLicense && hasGoodVision);
+console.log(hasDriveringLicense || hasGoodVision);
+
+if (hasDriveringLicense && hasGoodVision) {
+    console.log('Riyanshu is able to drive!');
+}else{
+    console.log('Someone else should drive...');
+}
+
+const isTired = true; // C
+console.log(hasDriveringLicense && hasGoodVision && isTired);
+
+if (hasDriveringLicense && hasGoodVision && isTired) {
+    console.log('Sarah is able to drive!');
+}else{
+    console.log('Someone else should drive...');
+}
