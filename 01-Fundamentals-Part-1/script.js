@@ -64,6 +64,7 @@ lastName = 'Sharma';
 console.log(lastName);
 */
 
+/*
 //math operator
 const ageRiyanshu = now-2005;
 const ageAditya = now-2001;
@@ -92,3 +93,16 @@ console.age(ageIndu >= 18);
 const isFullAge = ageIndu >=18;
 
 console.log(now - 2005 > now - 2001 > now - 1997);
+*/
+let now;
+const ageRiyanshu = now-2005;
+const ageAditya = now-2001;
+const ageIndu = now-1997;
+console.log(now - 2005 > now - 2001 > now - 1997);
+
+let x,y;
+x = y = 25 - 10 -5; //x = y = 10, x = 10
+console.log(x,y);
+
+const averageAge = (ageRiyanshu + ageAditya + ageIndu)/2 ;
+console.log(ageRiyanshu, ageAditya, ageIndu, averageAge);
