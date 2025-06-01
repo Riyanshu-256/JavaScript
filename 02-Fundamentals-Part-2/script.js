@@ -35,7 +35,7 @@ const appleOrange = fruitProcessor(10,5);
 console.Log(appleOrange.juice);
 */
 
-
+/* 3.
 // FUNCTION DECLARATION
 const age1 = calcAge1(2005);
 
@@ -49,8 +49,9 @@ const calcAge2 = function (birthYear) {
 }
 const age2 = calcAge2(2005);
 console.log(age1, age2);
+*/
 
-
+/* 4.
 //ARROW FUNCTIONS
 const calcAge3 = birthYear => 2025 - birthYear;
 const age3 = calcAge3(2005);
@@ -65,3 +66,17 @@ const yearsUntilRetirement = (birthYear, firstName) => {
 
 console.log(yearsUntilRetirement(2005, 'Riyanshu'));
 console.log(yearsUntilRetirement(2000, 'Anshu'));
+*/
+
+//FUNCTIONS CALLING OTHER FUNCTIONS
+function cutFruitPieces(fruit) {
+    return fruit * 4;
+}
+
+function fruitProcessor(apples, oranges) {
+    const applePieces = cutFruitPieces(apples);
+    const orangePieces = cutFruitPieces(oranges);
+    const juice = `Juice with ${apples} apples and ${oranges} oranges.`;
+    return juice;
+}
+console.log(fruitProcessor(2,3));
