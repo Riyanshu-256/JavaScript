@@ -181,3 +181,18 @@ console.log(n);
 
 console.log( 2+3+4 +'5');
 console.log('10'-'4'-'3'-2+'5');
+
+// 5 falsy values -->  0, null, ' ', undefined, NaN
+const money = 100;
+if(money) {
+    console.log("Don't spend it all");
+}else {
+    console.log('You should get a job!');
+}
+
+let height = 0;
+if(height) {
+    console.log('YAY! height is defined');
+}else {
+    console.log('Height is UNNDEFINED');
+}
