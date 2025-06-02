@@ -213,3 +213,37 @@ const totals = [bills[0] + tips[0], bills[1] + tips[1], bills[2] + tips[2]];
 
 console.log(bills, tips, totals);
 */
+
+// OBJECTS
+const Anshu = {
+    firstName: 'Anshu',
+    lastName: 'Sharma',
+    age: 2025-2005,
+    profession: 'Student',
+    friends: ['Aditya', 'Indu', 'Riyanshu']
+};
+console.log(Anshu);
+
+console.log(Anshu.lastName);
+console.log(Anshu['lastName']);
+
+const nameKey = 'Name';
+console.log(Anshu['firstName' + nameKey]);
+console.log(Anshu['lastName' + nameKey]);
+
+//console.log(Anshu.'last' + nameKey) --> Wrong way
+
+const interestedIn = prompt('What do you whant to know about Anshu? Choose between firstName, lastName, age, profession, and friends');
+
+if (Anshu[interestedIn]) {
+    console.log(Anshu[interestedIn]);
+}else{
+    console.log('Wrong request! Choose between firstName, lastName, age, profession, and friends');
+}
+Anshu.location = 'Koderma';
+Anshu['email'] = 'riyanshu062@gmail.com';
+console.log(Anshu);
+
+// Challenge --> "Anshu has 3 friends, and his best friend is called Indu"
+
+console.log(`${Anshu.firstName} has ${Anshu.friends.length} friends, and his best friend is called ${Anshu.friends[1]}`);
