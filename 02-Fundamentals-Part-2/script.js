@@ -214,7 +214,9 @@ const totals = [bills[0] + tips[0], bills[1] + tips[1], bills[2] + tips[2]];
 console.log(bills, tips, totals);
 */
 
+/* 9.
 // OBJECTS
+//DOT vs BRACKET NOTATION
 const Anshu = {
     firstName: 'Anshu',
     lastName: 'Sharma',
@@ -247,3 +249,78 @@ console.log(Anshu);
 // Challenge --> "Anshu has 3 friends, and his best friend is called Indu"
 
 console.log(`${Anshu.firstName} has ${Anshu.friends.length} friends, and his best friend is called ${Anshu.friends[1]}`);
+*/
+
+/* 10.
+//OBJECT METHODS
+
+const jonas = {
+  firstName: 'Anshu',
+  lastName: 'Sharma',
+  birthYeah: 2000,
+  profession: 'Student',
+  friends: ['Aditya', 'Indu', 'Riyanshu'],
+  hasDrivingLicense: true,
+
+  // calcAge: function (birthYear) {
+  //   return 2037 - birthYear;
+  // }
+
+  // calcAge: function () {
+  //   // console.log(this);
+  //   return 2037 - this.birthYear;
+  // }
+
+  calcAge: function () {
+    this.age = 2037 - this.birthYear;
+    return this.age;
+  },
+
+  getSummary: function () {
+    return `${this.firstName} is a ${this.calcAge()}-year old ${Anshu.profession}, and he has ${this.hasDrivingLicense ? 'a' : 'no'} driving license.`
+  }
+};
+
+console.log(Anshu.calcAge());
+
+console.log(Anshu.age);
+console.log(Anshu.age);
+console.log(Anshu.age);
+*/
+
+/*
+// CODING CHALLENGE
+const mark = {
+  fullName: 'Mark Miller',
+  mass: 78,
+  height: 1.69,
+  calcBMI: function () {
+    this.bmi = this.mass / this.height ** 2;
+    return this.bmi;
+  }
+};
+
+const john = {
+  fullName: 'John Smith',
+  mass: 92,
+  height: 1.95,
+  calcBMI: function () {
+    this.bmi = this.mass / this.height ** 2;
+    return this.bmi;
+  }
+};
+
+mark.calcBMI();
+john.calcBMI();
+
+console.log(mark.bmi, john.bmi);
+
+// "John Smith's BMI (28.3) is higher than Mark Miller's (23.9)!"
+
+if (mark.bmi > john.bmi) {
+  console.log(`${mark.fullName}'s BMI (${mark.bmi}) is higher than ${john.fullName}'s BMI (${john.bmi})`)
+} else if (john.bmi > mark.bmi) {
+  console.log(`${john.fullName}'s BMI (${john.bmi}) is higher than ${mark.fullName}'s BMI (${mark.bmi})`)
+}
+*/
+
