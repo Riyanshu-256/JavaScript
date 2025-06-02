@@ -460,4 +460,3 @@ console.log(calcAverage(tips));
 
 
 ///////////--------COMPLETED----------/////////////
-
