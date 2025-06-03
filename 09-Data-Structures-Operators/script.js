@@ -52,6 +52,7 @@ const [l, m, n = 1] = [8, 9];
 console.log(l, m, n);
 */
 
+/*
 // Destructuring object
 // Data needed for a later exercise
 const flights =
@@ -74,7 +75,7 @@ const mexicanFoods = new Set([
   'avocado',
   'garlic',
 ]);
-
+ 
 // Data needed for first part of the section
 const restaurant = {
   Name: 'Classico Italiano',
@@ -82,6 +83,7 @@ const restaurant = {
   categories: ['Italian', 'Pizzeria', 'Vegetarian', 'Organic'],
   starterMenu: ['Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad'],
   mainMenu: ['Pizza', 'Pasta', 'Risotto'],
+
 
   openingHours: {
     thu: {
@@ -132,3 +134,36 @@ console.log(a, b);
 // Nested objects
 const {fri: {open: o, close: c},} = openingHours;
 console.log(o, c);
+
+
+const arr = [7, 8, 9];
+const badNewArr = [1, 2, arr[0], arr[1], arr[2]];
+console.log(badNewArr);
+
+const newArr = [1, 2, ...arr];
+console.log(newArr);
+
+console.log(...newArr);
+console.log(1, 2, 7, 8, 9);
+
+const newMenu = [...restaurant.mainMenu, 'Gnocci'];
+console.log(newMenu);
+
+// Copy array
+const mainMenuCopy = [...restaurant.mainMenu];
+
+//Iterables: array, strings, maps, sets, NOT objects
+const str = 'Riyanshu';
+const letters = [...str, ' ', 'S.'];
+console.log(letters);
+console.log(...str);
+// console.log(`${...str} Sharma`); 
+
+cost ingredients = [
+  prompt('Let's make pasta! ingredients 1?),
+  prompt('Ingredients 2?'),
+  prompt('Ingredients 3?'),
+];
+console.log(ingredients);
+*/
+
