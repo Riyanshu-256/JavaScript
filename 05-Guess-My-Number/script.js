@@ -66,7 +66,7 @@ document.querySelector('.check').addEventListener('click', function () {
       document.querySelector('.score').textContent = 0;
     }
   }
-});
+}); 
 
 // Setting up the again button
 document.querySelector('.again').addEventListener('click', function () {
