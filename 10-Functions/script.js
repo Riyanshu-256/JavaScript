@@ -2,6 +2,7 @@
 
 /*
 // DEFAULT PARAMETERS
+
 const bookings = [];
 
 const createBooking = function(
@@ -32,7 +33,7 @@ createBooking('LH123', undefined, 1000);
 
 //-----------------------------------------------------------------------------------------------------------------------------//
 
-// HOW PASSING ARGUMENTS WORKS: VALUE vs REFERENCE
+// HOW PASSING ARGUMENTS WORKS: VALUE(Yes) vs REFERENCE(No)
 
 const flight = 'LH234';
 const Anshu = {
@@ -51,6 +52,17 @@ const checkIn = function(flightNum, passenger) {
     }
 };
 
+//checkIn(flight, Anshu);
+//console.log(flight);
+//console.log(Anshu);
+
+// Is the same as doing....
+//const flightNum = flight;
+//const passenger = Anshu;
+
+const newPassport = function(person) {
+    person.passport = Math.trunc(Math.random() * 100000000000);
+}
+
+newPassport(Anshu) ;
 checkIn(flight, Anshu);
-console.log(flight);
-console.log(Anshu);
