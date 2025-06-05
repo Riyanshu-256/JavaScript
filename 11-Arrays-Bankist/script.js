@@ -367,4 +367,17 @@ console.log(avg1, avg2);
 */
 
 //-----------------------------------------------------------------------------------------------------------------------------//
+/*
+// THE FIND METHOD
+const firstWithdrawl = movements.find(mov => mov < 0);
+console.log(movements);
+console.log(firstWithdrawl);
+
+console.log(accounts);
+
+const  account = accounts.find(acc => acc.owner === 'Jessica Davis');
+console.log(account);
+*/
+
+//---------------------------------------------------------------------------------------------------------------------------------//
 
