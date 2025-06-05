@@ -157,7 +157,7 @@ movements.forEach(function(mov, i, arr) {
 */
 
 //------------------------------------------------------------------------------------------------//
-
+/*
 // FOREACH WITH MAPS AND SETS
 // map
 const currencies = new Map([
@@ -176,3 +176,6 @@ console.log(currenciesUnique);
 currenciesUnique.forEach(function (value, _ , map){
   console.log(`${value}: ${value}`);
 });
+*/
+//---------------------------------------------------------------------------------------------------//
+
