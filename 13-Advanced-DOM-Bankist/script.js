@@ -49,6 +49,8 @@ console.log(allButtons);
 
 console.log(document.getElementsByClassName('btn'));
 
+//-------------------------------------------------------------------------------------------------------------//
+
 // CREATING AND INSERTING ELEMENTS
 
 // .insertAdjacentHTML
@@ -62,4 +64,12 @@ header.append(message);
 //header.append(message.cloneNode(true));
 
 //header.before(message);
-header.after(message);
+//header.after(message);
+
+// DELETE ELEMENTS
+document.querySelector('.btn--close-cookie').addEventListener('click', function () {
+  //message.remove();
+  message.parentElement.removeChild(message);
+});
+
+//-----------------------------------------------------------------------------------------------------------------//
