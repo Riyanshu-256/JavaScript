@@ -46,3 +46,16 @@ console.log(allSections);
 document.getElementById('section--1');
 const allButtons = document.getElementsByTagName('button');
 console.log(allButtons);
+
+console.log(document.getElementsByClassName('btn'));
+
+// CREATING AND INSERTING ELEMENTS
+
+// .insertAdjacentHTML
+const message = document.createElement('div');
+message.classList.add('cookie-message');
+//message.textContent = 'We use cookies for improved functionality and analytics.';
+message.innerHTML = 'We use cookies for improved functionality and analytics. <button class = "btn btn--close-cookie"> Got it!</button>';
+
+header.prepend(message);
+header.append(message);
