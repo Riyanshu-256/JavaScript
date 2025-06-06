@@ -833,7 +833,7 @@ const owners = ['Jonas', 'Zach', 'Adam', 'Martha'];
 console.log(owners.sort());
 console.log(owners);
 
-// Numbers
+// Numbers 
 console.log(movements);
 
 // return < 0, A, B (keep order) 
