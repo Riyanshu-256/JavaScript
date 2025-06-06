@@ -826,7 +826,7 @@ console.log(heaviestFetchBreed);
 //--------------------------------------------------------------------------------------------------------------------------------------------------//
 
 /*
-// SHORTING ARRAYS
+// SHORTING ARRAYS 
 
 // Strings
 const owners = ['Jonas', 'Zach', 'Adam', 'Martha'];
