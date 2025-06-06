@@ -840,7 +840,7 @@ console.log(movements);
 // return > 0, B, A (switch order)
 
 // Ascending
-// movements.sort((a, b) => {
+// movements.sort((a, b) => { 
 //   if (a > b) return 1;
 //   if (a < b) return -1;
 // });
