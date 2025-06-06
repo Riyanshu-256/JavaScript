@@ -1,6 +1,5 @@
 'use strict';
 
-/*
 ///////////////////////////////////////
 // Modal window
 
@@ -33,10 +32,10 @@ document.addEventListener('keydown', function (e) {
     closeModal();
   }
 });
-*/
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-/*
 
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+/*
 console.log(document.documentElement);
 console.log(document.head);
 console.log(document.body);
@@ -50,9 +49,10 @@ const allButtons = document.getElementsByTagName('button');
 console.log(allButtons);
 
 console.log(document.getElementsByClassName('btn'));
+*/
 
 //------------------------------------------------------------------------------------------------------------------------------------------------------------//
-
+/*
 // CREATING AND INSERTING ELEMENTS
 
 // .insertAdjacentHTML
@@ -73,6 +73,7 @@ document.querySelector('.btn--close-cookie').addEventListener('click', function 
   //message.remove();
   message.parentElement.removeChild(message);
 });
+
 
 //-------------------------------------------------------------------------------------------------------------------------------------------------------------//
 
@@ -123,10 +124,10 @@ logo.classList.contains('c'); // not includes
 
 // Don't use
 logo.clasName = 'Anshu';
-*/
+
 
 //------------------------------------------------------------------------------------------------------------------------------------------------//
-/*
+
 
 // IMPLEMENTING SMOOTH SCROLLING
 
@@ -161,10 +162,10 @@ btnScrollTo.addEventListener('click', function(e) {
 
   section1.scrollIntoView({ behavior: 'smooth' });
 });
-*/
+
 
 //------------------------------------------------------------------------------------------------------------------------------------------------------------//
-/*
+
 
 // TYPES OF EVENT AND EVENT HANDLERS
 
@@ -185,3 +186,83 @@ setTimeout(() => h1.removeEventListener('mouseenter', alertH1), 3000);
 
 //-------------------------------------------------------------------------------------------------------------------------------------------------------------//
 
+/*
+// A BETTER WAY: THE INTERSECTION OBSERVER API
+
+const header = document.querySelector('.header');
+const navHeight = nav.getBoundingClientRect().height;
+console.log(navHeight);
+
+const stickyNav = function (entries) {
+  const [entry] = entries;
+  // console.log(entry);
+
+  if (!entry.isIntersecting) nav.classList.add('sticky');
+  else nav.classList.remove('sticky');
+};
+
+const headerObserver = new IntersectionObserver(stickyNav, {
+  root: null,
+  threshold: 0,
+  rootMargin: `-${navHeight}px`,
+});
+
+headerObserver.observe(header);
+*/
+
+//----------------------------------------------------------------------------------------------------------------------------------------------------------//
+
+// REVEALING ELEMENTS ON SCROLL
+
+const allSections = document.querySelectorAll('.section');
+
+const revealSection = function (entries, observer) {
+  entries.forEach(entry => {
+    if (!entry.isIntersecting) return;
+
+    entry.target.classList.remove('section--hidden');
+    observer.unobserve(entry.target);
+  });
+};
+
+const sectionObserver = new IntersectionObserver(revealSection, {
+  root: null,
+  threshold: 0.15,
+});
+
+allSections.forEach(function (section) {
+  sectionObserver.observe(section);
+  section.classList.add('section--hidden');
+});
+
+//----------------------------------------------------------------------------------------------------------------------------------------------------------//
+
+// LAZY LOADING IMAGES
+
+const imgTargets = document.querySelectorAll('img[data-src]');
+
+const loadImg = function (entries, observer) {
+  const [entry] = entries;
+
+  if (!entry.isIntersecting) return;
+
+  // Replace src with data-src
+  entry.target.src = entry.target.dataset.src;
+
+  entry.target.addEventListener('load', function () {
+    entry.target.classList.remove('lazy-img');
+  });
+
+  observer.unobserve(entry.target);
+};
+
+const imgObserver = new IntersectionObserver(loadImg, {
+  root: null,
+  threshold: 0,
+  rootMargin: '200px',
+});
+
+imgTargets.forEach(img => imgObserver.observe(img));
+
+
+//---------------------------------------------------------------------------------------------------------------------------------------------------------//
