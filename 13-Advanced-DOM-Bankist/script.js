@@ -14,7 +14,7 @@ const openModal = function (e) {
   overlay.classList.remove('hidden');
 };
 
-const closeModal = function () {
+const closeModal = function () { 
   modal.classList.add('hidden');
   overlay.classList.add('hidden');
 };
