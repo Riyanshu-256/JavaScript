@@ -271,4 +271,4 @@ imgTargets.forEach(img => imgObserver.observe(img));
 const slides = document.querySelectorAll('.slide');
 
 slides.forEach((s, i) => s.computedStyleMap.transform = `translateX()`)
-// 0%, 100%, 200%, 300%
+// 0%, 100%, 200%, 300% 
