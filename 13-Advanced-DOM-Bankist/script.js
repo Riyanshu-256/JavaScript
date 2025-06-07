@@ -333,9 +333,7 @@ imgTargets.forEach(img => imgObserver.observe(img));
   };
   init();
 
-}
-
-// Event handlers
+  // Event handlers
   btnRight.addEventListener('click', nextSlide);
   btnLeft.addEventListener('click', prevSlide);
 
@@ -354,6 +352,9 @@ imgTargets.forEach(img => imgObserver.observe(img));
       activateDot(curSlide);
     }
   });
+
+}
+
 slider();
 
 //----------------------------------------------------------------------------------------------------------------------------------------------------------//
