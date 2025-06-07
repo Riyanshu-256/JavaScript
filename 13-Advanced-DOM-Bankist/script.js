@@ -73,10 +73,10 @@ document.querySelector('.btn--close-cookie').addEventListener('click', function 
   //message.remove();
   message.parentElement.removeChild(message);
 });
-
+*/
 
 //-------------------------------------------------------------------------------------------------------------------------------------------------------------//
-
+/*
 //STYLES, ATTRIBUTES AND CLASSES  
   
 // Styles
@@ -124,11 +124,11 @@ logo.classList.contains('c'); // not includes
 
 // Don't use
 logo.clasName = 'Anshu';
-
+*/
 
 //------------------------------------------------------------------------------------------------------------------------------------------------//
 
-
+/*
 // IMPLEMENTING SMOOTH SCROLLING
 
 const btnScrollTo = document.querySelector('.btn--scroll-to');
@@ -162,11 +162,11 @@ btnScrollTo.addEventListener('click', function(e) {
 
   section1.scrollIntoView({ behavior: 'smooth' });
 });
-
+*/
 
 //------------------------------------------------------------------------------------------------------------------------------------------------------------//
 
-
+/*
 // TYPES OF EVENT AND EVENT HANDLERS
 
 const h1 = document.querySelector('h1');
