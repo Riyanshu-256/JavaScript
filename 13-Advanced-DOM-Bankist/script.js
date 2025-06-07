@@ -268,3 +268,7 @@ imgTargets.forEach(img => imgObserver.observe(img));
 //---------------------------------------------------------------------------------------------------------------------------------------------------------// 
 
 // BUILDING A SLIDER COMPONENT: PART 1
+const slides = document.querySelectorAll('.slide');
+
+slides.forEach((s, i) => s.computedStyleMap.transform = `translateX()`)
+// 0%, 100%, 200%, 300%
