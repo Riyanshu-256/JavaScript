@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -12,8 +13,6 @@
     />
     <link rel="stylesheet" href="style.css" />
     <title>Bankist | When Banking meets Minimalist</title>
-
-    <script defer src="script.js"></script>
   </head>
   <body>
     <header class="header">
@@ -23,8 +22,6 @@
           alt="Bankist logo"
           class="nav__logo"
           id="logo"
-          designer="Jonas"
-          data-version-number="3.0"
         />
         <ul class="nav__links">
           <li class="nav__item">
@@ -45,7 +42,6 @@
       </nav>
 
       <div class="header__title">
-        <!-- <h1 onclick="alert('HTML alert')"> -->
         <h1>
           When
           <!-- Green highlight effect -->
@@ -220,7 +216,8 @@
       </div>
 
       <div class="slider">
-        <div class="slide">
+        <!--
+        <div class="slide slide--1">
           <div class="testimonial">
             <h5 class="testimonial__header">Best financial decision ever!</h5>
             <blockquote class="testimonial__text">
@@ -239,7 +236,7 @@
           </div>
         </div>
 
-        <div class="slide">
+        <div class="slide slide--2">
           <div class="testimonial">
             <h5 class="testimonial__header">
               The last step to becoming a complete minimalist
@@ -259,7 +256,7 @@
           </div>
         </div>
 
-        <div class="slide">
+        <div class="slide slide--3">
           <div class="testimonial">
             <h5 class="testimonial__header">
               Finally free from old-school banks
@@ -279,7 +276,12 @@
             </address>
           </div>
         </div>
-
+      -->
+         <div class="slide"><img src="img/img-1.jpg" alt="Photo 1" /></div>
+        <div class="slide"><img src="img/img-2.jpg" alt="Photo 2" /></div>
+        <div class="slide"><img src="img/img-3.jpg" alt="Photo 3" /></div>
+        <div class="slide"><img src="img/img-4.jpg" alt="Photo 4" /></div>
+         
         <button class="slider__btn slider__btn--left">&larr;</button>
         <button class="slider__btn slider__btn--right">&rarr;</button>
         <div class="dots"></div>
@@ -351,6 +353,7 @@
     </div>
     <div class="overlay hidden"></div>
 
-    <!-- <script src="script.js"></script> -->
+    <script src="script.js"></script>
   </body>
 </html>
+
