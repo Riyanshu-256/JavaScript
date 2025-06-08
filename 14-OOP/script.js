@@ -2,10 +2,12 @@
 
 // CONSTRUCTOR FUNCTION
 const Person = function(firstName, birthYear) {
-    console.log(this);
+    this.firstName = firstName;
+    this.birthYear = birthYear;
 }
 
-new Person('Anshu', 2005);
+const Anshu = new Person('Anshu', 2005);
+console.log(Anshu);
 
 // 1. New {} is created
 // 2. function is called, this = {}
