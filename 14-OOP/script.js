@@ -31,10 +31,26 @@ console.log(Anshu instanceof Person);
 // PROTOTYPES
 console.log(Person.prototype);
 
-Person.prototype.calcAge = function (){
-    console.log(2025 - this.birthYear)
+Person.prototype.calcAge = function () {
+  console.log(2025 - this.birthYear);
 };
 
 Anshu.calcAge();
 Riyanshu.calcAge();
-Riya.calcAge();
+
+console.log(Anshu.__proto__);
+console.log(Riyanshu.__proto__ === Person.prototype);
+
+console.log(Person.prototype.isPrototypeOf(Anshu));
+console.log(Person.prototype.isPrototypeOf(Riyanshu));
+console.log(Person.prototype.isPrototypeOf(Person));
+
+// .prototyeOfLinkedObjects
+
+Person.prototype.species = 'Homo Sapiens';
+console.log(Anshu.species, Riyanshu.species);
+
+console.log(Anshu.hasOwnProperty('firstName'));
+console.log(Riyanshu.hasOwnProperty('species'));
+
+//------------------------------------------------------------------------------------------------------------------------------------------------------------//
