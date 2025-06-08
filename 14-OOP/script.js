@@ -1,6 +1,6 @@
 'use strict';
 
-// CONSTRUCTOR FUNCTION
+// CONSTRUCTOR FUNCTION AND NEW OPERATOR
 const Person = function(firstName, birthYear) {
     // Instances properties
     this.firstName = firstName;
@@ -54,3 +54,4 @@ console.log(Anshu.hasOwnProperty('firstName'));
 console.log(Riyanshu.hasOwnProperty('species'));
 
 //------------------------------------------------------------------------------------------------------------------------------------------------------------//
+
