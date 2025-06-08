@@ -29,3 +29,12 @@ console.log(Anshu instanceof Person);
 //------------------------------------------------------------------------------------------------------------------------------------------------------------//
 
 // PROTOTYPES
+console.log(Person.prototype);
+
+Person.prototype.calcAge = function (){
+    console.log(2025 - this.birthYear)
+};
+
+Anshu.calcAge();
+Riyanshu.calcAge();
+Riya.calcAge();
