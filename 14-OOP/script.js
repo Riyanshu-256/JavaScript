@@ -107,3 +107,156 @@ bmw.brake();
 bmw.accelerate();
 
 //------------------------------------------------------------------------------------------------------------------------------------------------------------//
+
+// ES6 CLASSES
+
+// Class expression
+// const PersonCl = class {}
+
+// Class declaration
+class PersonCl {
+  constructor(fullName, birthYear) {
+    this.fullName = fullName;
+    this.birthYear = birthYear;
+  }
+
+  // Instance methods
+  // Methods will be added to .prototype property
+  calcAge() {
+    console.log(2025 - this.birthYear);
+  }
+
+  greet() {
+    console.log(`Hey ${this.fullName}`);
+  }
+
+  get age() {
+    return 2025 - this.birthYear;
+  }
+
+  // Set a property that already exists
+  set fullName(name) {
+    if (name.includes(' ')) this._fullName = name;
+    else alert(`${name} is not a full name!`);
+  }
+
+  get fullName() {
+    return this._fullName;
+  }
+
+  // Static method
+  static hey() {
+    console.log('Hey there');
+    console.log(this);
+  }
+}
+
+const jessica = new PersonCl('Anshu Sharma', 2005);
+console.log(Anshu);
+jessica.calcAge();
+console.log(Anshu.age);
+
+console.log(Anshu.__proto__ === PersonCl.prototype);
+
+// PersonCl.prototype.greet = function () {
+//   console.log(`Hey ${this.firstName}`);
+// };
+jessica.greet();
+
+// 1. Classes are NOT hoisted
+// 2. Classes are first-class citizens
+// 3. Classes are executed in strict mode
+
+const walter = new PersonCl('Riyanshu Sharma', 2005);
+// PersonCl.hey();
+
+//------------------------------------------------------------------------------------------------------------------------------------------------------------//
+
+// SETTERS & GETTERS
+const account = {
+  owner: 'Anshu',
+  movements: [200, 530, 120, 300],
+
+  get latest() {
+    return this.movements.slice(-1).pop();
+  },
+
+  set latest(mov) {
+    this.movements.push(mov);
+  },
+};
+
+console.log(account.latest);
+
+account.latest = 50;
+console.log(account.movements);
+
+
+//---------------------------------------------------------------------------------------------------------------------------------------------------------//
+
+// Object.create
+const PersonProto = {
+  calcAge() {
+    console.log(2037 - this.birthYear);
+  },
+
+  init(firstName, birthYear) {
+    this.firstName = firstName;
+    this.birthYear = birthYear;
+  },
+};
+
+const Saloni = Object.create(PersonProto);
+console.log(Saloni);
+Saloni.name = 'Saloni';
+Saloni.birthYear = 2004;
+Saloni.calcAge();
+
+console.log(Saloni.__proto__ === PersonProto);
+
+const Supriya = Object.create(PersonProto);
+sarah.init('Supriya', 1979);
+sarah.calcAge();
+
+const Aisha = Object.create(PersonProto);
+sarah.init('Aisha', 1979);
+sarah.calcAge();
+
+//----------------------------------------------------------------------------------------------------------------------------------------------------------//
+
+//------------------------------------------------------------------------CODING CHALLENGE #02-------------------------------------------------------------//
+
+class CarCl {
+  constructor(make, speed) {
+    this.make = make;
+    this.speed = speed;
+  }
+
+  accelerate() {
+    this.speed += 10;
+    console.log(`${this.make} is going at ${this.speed} km/h`);
+  }
+
+  brake() {
+    this.speed -= 5;
+    console.log(`${this.make} is going at ${this.speed} km/h`);
+  }
+
+  get speedUS() {
+    return this.speed / 1.6;
+  }
+
+  set speedUS(speed) {
+    this.speed = speed * 1.6;
+  }
+}
+
+const ford = new CarCl('Ford', 120);
+console.log(ford.speedUS);
+ford.accelerate();
+ford.accelerate();
+ford.brake();
+ford.speedUS = 50;
+console.log(ford);
+
+//-----------------------------------------------------------------------------------------------------------------------------------------------------------//
