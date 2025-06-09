@@ -30,16 +30,23 @@ if (navigator.geolocation)
 
         map.on('click', function(mapEvent) {
             form.classList.remove('hidden')
+            inputDistance.focus();
+    });
+},
 
+    function () {
+      alert("Could not get your position!");
+    }
+  );
 
-
-
-            /*
-            console.log(mapEvent);
-            const { lat, lng } = mapEvent.latlng;
-
-         L.marker([lat, lng]).addTo(map)
-        .bindPopup(L.popup({
+  form.addEventListener('sumbit', function () {
+    //Display Marker
+    console.log(mapEvent);
+    const { lat, lng } = mapEvent.latlng;
+       L.marker([lat, lng])
+       .addTo(map)
+       .bindPopup(
+        L.popup({
             maxWidth: 250,
             minWidth: 100,
             autoClose: false,
@@ -49,11 +56,5 @@ if (navigator.geolocation)
     )
     .setPopupContent('Workout')
     .openPopup(); 
-    */
-    });
-},
-
-    function () {
-      alert("Could not get your position!");
-    }
-  );
+    
+  })
