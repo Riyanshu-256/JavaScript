@@ -49,7 +49,7 @@ const renderCountry = function (data, className = '') {
 /*
 // XMLHttpRequest
 
-const getCountryData = function (country) {
+
 
   request.addEventListener('load', function () {
   const [data] = JSON.parse(this.responseText);
