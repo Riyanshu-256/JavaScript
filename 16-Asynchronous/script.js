@@ -40,26 +40,27 @@ const renderCountry = function (data, className = '') {
     </div>
   </article>
   `;
-const btn = document.querySelector('.btn-country');
-const countriesContainer = document.querySelector('.countries');
-
-
-const renderError = function (msg) {
-  countriesContainer.insertAdjacentText('beforeend', msg);
+  countriesContainer.insertAdjacentHTML('beforeend', html);
   countriesContainer.style.opacity = 1;
 };
 
-const getJSON = function (url, errorMsg = 'Something went wrong') {
-  return fetch(url).then(response => {
-    if (!response.ok) throw new Error(`${errorMsg} (${response.status})`);
+//----------------------------------------------------------------------------------------------------------------//
 
-    return response.json();
-  });
-};
+/*
+// XMLHttpRequest
 
-const renderCountry = function (data, className = '') {
+const getCountryData = function (country) {
+
+  request.addEventListener('load', function () {
+  const [data] = JSON.parse(this.responseText);
+  console.log(data);
+
+  const request = new XMLHttpRequest();
+  request.open('GET', `https://restcountries.com/v2/name/${country}`);
+  request.send();
+
   const html = `
-  <article class="country ${className}">
+  <article class="country">
     <img class="country__img" src="${data.flag}" />
     <div class="country__data">
       <h3 class="country__name">${data.name}</h3>
@@ -72,8 +73,14 @@ const renderCountry = function (data, className = '') {
     </div>
   </article>
   `;
-  countriesContainer.insertAdjacentHTML('beforeend', html);
-  countriesContainer.style.opacity = 1
-    };
-    
+    countriesContainer.insertAdjacentHTML('beforeend', html);
+    countriesContainer.style.opacity = 1;
+  });
 };
+
+getCountryData('portugal');
+getCountryData('usa');
+getCountryData('germany');
+*/
+
+//----------------------------------------------------------------------------------------------------------------//
