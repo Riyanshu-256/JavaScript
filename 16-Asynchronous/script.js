@@ -85,3 +85,32 @@ getCountryData('germany');
 
 //----------------------------------------------------------------------------------------------------------------//
 
+// Callback
+const getCountryAndNeighbour = function (country) {
+
+    request.addEventListener('load', function () {
+    const [data] = JSON.parse(this.responseText);
+    console.log(data);
+
+    const request = new XMLHttpRequest();
+    request.open('GET', `https://restcountries.com/v2/name/${country}`);
+    request.send();
+
+    const request2 = new XMLHttpRequest();
+    request2.open('GET', `https://restcountries.eu/rest/v2/alpha/${neighbour}`);
+    request2.send();
+
+    renderCountry(data);
+
+    const [neighbour] = data.borders;
+
+    if (!neighbour) return;
+
+    request2.addEventListener('load', function () {
+      const data2 = JSON.parse(this.responseText);
+      console.log(data2);
+
+      renderCountry(data2, 'neighbour');
+    });
+  });
+};
