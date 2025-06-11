@@ -316,6 +316,7 @@ Promise.reject(new Error('Problem!')).catch(x => console.error(x));
 
 //-------------------------------------------------------------------------------------------------------------------------------------------------//
 
+/*
 // PROMISIFYING THE GEOLOCATION API
 const getPosition = function () {
   return new Promise(function (resolve, reject) {
@@ -355,10 +356,11 @@ const whereAmI = function () {
 };
 
 btn.addEventListener('click', whereAmI);
+*/
 
-//------------------------------------------------------------------------------------------------------------------------------------------------//
+//------------------------------------------------------------------------------------------------------------------//
 
-//--------------------------------------------------------------------CODE CHALLENGE #02--------------------------------------------------------------//
+//--------------------------------------------CODING CHALLENGE #02------------------------------------------------//
 /*
 const wait = function (seconds) {
   return new Promise(function (resolve) {
@@ -406,5 +408,64 @@ createImage('img/img-1.jpg')
   })
   .catch(err => console.error(err)); 
 */
+
+//---------------------------------------------------------------------------------------------------------------//
+
+// Consuming Promises with Async/Await
+
+// Error Handling With try...catch
+
+const getPosition = function () {
+  return new Promise(function (resolve, reject) {
+    navigator.geolocation.getCurrentPosition(resolve, reject);
+  });
+};
+
+// fetch(`https://restcountries.com/v2/name/${country}`).then(res => console.log(res))
+
+const whereAmI = async function () {
+  try {
+    // Geolocation
+    const pos = await getPosition();
+    const { latitude: lat, longitude: lng } = pos.coords;
+
+    // Reverse geocoding
+    const resGeo = await fetch(`https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=${lat}&longitude=${lng}`);
+    if (!resGeo.ok) throw new Error('Problem getting location data');
+
+    const dataGeo = await resGeo.json();
+    console.log(dataGeo);
+
+    // Country data
+    const res = await fetch(
+      `https://restcountries.com/v2/name/${dataGeo.countryCode}`
+    );
+    
+    // BUG in video:
+    // if (!resGeo.ok) throw new Error('Problem getting country');
+    
+    // FIX:
+    if (!res.ok) throw new Error('Problem getting country');
+
+    const data = await res.json();
+    console.log(data);
+    renderCountry(data[0]);
+  } catch (err) {
+    console.error(`${err} 💥`);
+    renderError(`💥 ${err.message}`);
+  }
+};
+whereAmI();
+whereAmI();
+whereAmI();
+console.log('FIRST');
+
+// try {
+//   let y = 1;
+//   const x = 2;
+//   y = 3;
+// } catch (err) {
+//   alert(err.message);
+// }
 
 //---------------------------------------------------------------------------------------------------------------//
