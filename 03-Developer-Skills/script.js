@@ -73,6 +73,4 @@ const printForecast = function (arr) {
 printForecast(data1);
 */
 
-// DOUBT IN CODING CHALLENGE #2 //
-
-////////////////--------------- COMPLETED ------------------//////////////////
+//--------------------------------------------- COMPLETED --------------------------------------------//
