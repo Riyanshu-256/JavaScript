@@ -1,6 +1,6 @@
-var firstName = 'Akash'
-let lastName = 'Singh'
-let age = 15
-const yearOfBirth = 1999
+var firstName = 'RIYANSHU'
+let lastName = 'SHARMA'
+let age = 20;
+const yearOfBirth = 2005;
 
-let userIntro = 'Hi, my name is ' + firstName + ' ' + lastName
+let userIntro = 'Hi, my name is ' + firstName + ' ' + lastName +' '+ 'and I am' +' ' +age + 'years old'
