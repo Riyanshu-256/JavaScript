@@ -21,3 +21,5 @@ var team = 'CODE BLOODED';
 var member = 9;
 
 var Intro = 'Hi Myself' +' '+ Name +'. Currently I am learning frontend course'+' '+'which is organised by' +' '+ team +' '+'member' ;
+
+//----------------------------------------------------------------------------------------------------------------------------//
