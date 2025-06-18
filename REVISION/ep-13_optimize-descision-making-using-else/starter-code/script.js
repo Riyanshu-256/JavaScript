@@ -2,10 +2,11 @@ const username = prompt('Please Enter Your Name.');
 const userAge = parseInt(prompt('Please Enter Your Age.'));
 
 debugger
-
+/*
 if (!username) {
     username = 'Procodder';
 }
+    */
 
 if (username) {
     console.log(`Name: ${username}`);
