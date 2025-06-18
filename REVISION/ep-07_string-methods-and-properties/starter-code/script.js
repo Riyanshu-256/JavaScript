@@ -1,4 +1,11 @@
+//////////////////////////////////////////////////////------------STRING----------///////////////////////////////////////////////////////
+
 const message = 'Riyanshu Sharma';
+
+// PROPERTIES
+const length = message.length;
+
+//-----------------------------------------------------------------------------------------------------------------------------------//
 
 // METHODS (Without Argument)
 // Upper & Lower case
@@ -47,4 +54,14 @@ const m = message.charCodeAt(11);
 const intro = 'I am Riyanshu Sharma'
 const n = intro.split(' ');
 
-//----------------------------------------------------------------------------------------------------------------------------------//
+//------------------------------------------------------------------------------------------------------------------------------------//
+
+// STRING TEMPLATE LITERAL
+const bankBalance = 100000;
+
+const concatenatedString = `Last four digit of my account number is`.concat(' ', lastFourDigits);
+const templateString = `My account number is ${lastFourDigits.padStart('16', '*')}`;
+const templateString2 = `I have ${bankBalance} in my account`;
+const addedString = `I have ` + bankBalance + 'in my account';
+
+//-------------------------------------------------------------------------------------------------------------------------------------//
