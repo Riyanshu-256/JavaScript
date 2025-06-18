@@ -1,5 +1,6 @@
 const message = 'Riyanshu Sharma';
 
+// METHODS (Without Argument)
 // Upper & Lower case
 const capitalMessage = message.toUpperCase(); // Capital letter
 const smallMessage = message.toLowerCase();  // Small letter
@@ -14,7 +15,7 @@ const b = faltuMessage.trimEnd();
 
 //-----------------------------------------------------------------------------------------------------------------------------------//
 
-// METHOD (With Argument)
+// METHODS (With Argument)
 // Include() : to know about a small string present in Long string
 const  c = faltuMessage.includes('I')  // return -> true
 const  d = faltuMessage.includes('am')  // return -> true
