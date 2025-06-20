@@ -1,22 +1,24 @@
 const fruits = ['banana', 'apple', 'peach', 'mango', 'grapes']
 
+// FOR LOOP
 for(let i = 0; i < fruits.length; i++) {
     console.log(fruits[i]);
 }
+//-----------------------------------------------------------------------------------//
 
-console.log('*********************************');
-
+// FOR OF
 for(const fruit of fruits) {
     console.log(fruit);
 }
 
-const user = 'Anurag Singh'
-
-
+const user = 'Riyanshu Sharma';
 for(const letter of user) {
     console.log(letter);
 }
 
+//---------------------------------------------------------------------------------//
+
+// FOR IN
 const person = {
     firstName: 'Riyanshu',
     lastName: 'Sharma',
@@ -36,4 +38,4 @@ const personEntries = Object.entries(person)
 //     console.log(person[key]);
 // }
 
-
+//-------------------------------------------------------------------------------//
