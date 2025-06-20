@@ -1,17 +1,20 @@
+function addTwoNumbers(a, b) {
+    return a + b
+}
+const result = addTwoNumbers(56, 6)
+console.log(result);
 
-// Function Definition
-function introduceMe(username, profession, age) {
-    // console.log(typeof username);
-    // console.log(typeof profession);
-    // console.log(typeof age);
+//-------------------------------------------------------------------------------------------------------------------------------//
+
+// defination
+function introduceMe(username, profession, age) {    //return value of function is undefined
     console.log('Hi,');
-    console.log(`My name is ${username || 'Procodrr'}.`);
+    console.log(`My name is ${username}`);
     console.log(`I am a ${profession}`);
-    console.log(`I am ${age} years old.`); 
+    console.log(`I am ${age} years old`)
 }
 
-// //                  Function Call
+// call->introduceMe
 // const returnValue = introduceMe()
-
-// introduceMe('Anurag', 'Software Engineer', 25)
-// introduceMe('Akash', 'Mechanical Engineer', 27)
+introduceMe('Riyanshu', 'Software Engineer', 20);
+introduceMe('Anshu', 'Mechanical Engineer', 22);
