@@ -4,7 +4,7 @@ function addTwoNumbers(a, b) {
 const result = addTwoNumbers(56, 6)
 console.log(result);
 
-//-------------------------------------------------------------------------------------------------------------------------------//
+//----------------------------------------------------------------------------------------------------------------//
 
 // defination
 function introduceMe(username, profession, age) {    //return value of function is undefined
