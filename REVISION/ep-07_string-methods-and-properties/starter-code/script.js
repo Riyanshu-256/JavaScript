@@ -5,7 +5,7 @@ const message = 'Riyanshu Sharma';
 // PROPERTIES
 const length = message.length;
 
-//-----------------------------------------------------------------------------------------------------------------------------------//
+//------------------------------------------------------------------------------------------------------------//
 
 // METHODS (Without Argument)
 // Upper & Lower case
@@ -20,7 +20,7 @@ const smallLetter = faltuMessage.trim().toLowerCase();  // Small letter
 const a = faltuMessage.trimStart();
 const b = faltuMessage.trimEnd();
 
-//-----------------------------------------------------------------------------------------------------------------------------------//
+//------------------------------------------------------------------------------------------------------------//
 
 // METHODS (With Argument)
 // Include() : to know about a small string present in Long string
@@ -54,7 +54,7 @@ const m = message.charCodeAt(11);
 const intro = 'I am Riyanshu Sharma'
 const n = intro.split(' ');
 
-//------------------------------------------------------------------------------------------------------------------------------------//
+//------------------------------------------------------------------------------------------------------------//
 
 // STRING TEMPLATE LITERAL
 const bankBalance = 100000;
@@ -64,4 +64,4 @@ const templateString = `My account number is ${lastFourDigits.padStart('16', '*'
 const templateString2 = `I have ${bankBalance} in my account`;
 const addedString = `I have ` + bankBalance + 'in my account';
 
-//-------------------------------------------------------------------------------------------------------------------------------------//
+//------------------------------------------------------------------------------------------------------------//
