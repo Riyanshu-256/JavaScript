@@ -11,5 +11,5 @@ const user = {
     }
 }
 
-Object.seal(user);
-//Object.freeze(user);
+Object.seal(user);   // No adding/deleting, but updating existing values is fine. 
+Object.freeze(user);  // No adding, deleting, or updating values (fully locked). 
