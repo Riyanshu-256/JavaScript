@@ -5,7 +5,7 @@ const round2 = Math.round(2.2);
 // FLOOR : remove the no. after decimal
 const floor1 = Math.floor(2.3);
 const floor2 = Math.floor(2.5);
-const floor3 = Math.floor(2.99999999999999999)
+const floor3 = Math.floor(2.99999999999999999);
 
 // CEIL : Increasing by 1
 const ceil1 = Math.round(2.6);
